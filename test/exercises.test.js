@@ -52,7 +52,7 @@ describe("exercises", function () {
       // Assert
       expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array) => {
-        expect(expectedAnswer).to.deep.include(array.sort());
+        expect(expectedAnswer).toContainEqual(array.sort());
       });
     });
 
@@ -69,12 +69,12 @@ describe("exercises", function () {
       // Assert
       expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array) => {
-        expect(expectedAnswer).to.deep.include(array.sort());
+        expect(expectedAnswer).toContainEqual(array.sort());
       });
     });
   });
 
-  describe.skip("topKFrequentElements", function () {
+  describe("topKFrequentElements", function () {
     it("works with example 1", function () {
       // Arrange
       const list = [1, 1, 1, 2, 2, 3];
@@ -155,7 +155,7 @@ describe("exercises", function () {
       const valid = validSudoku(table);
 
       // Assert
-      expect(valid).to.be.false;
+      expect(valid).toBeFalse();
     });
 
     it("is not valid if a column has duplicate values", function () {
@@ -176,7 +176,7 @@ describe("exercises", function () {
       const valid = validSudoku(table);
 
       // Assert
-      expect(valid).to.be.false;
+      expect(valid).toBeFalse();
     });
 
     it("works for the table given in the README", function () {
@@ -197,7 +197,7 @@ describe("exercises", function () {
       const valid = validSudoku(table);
 
       // Assert
-      expect(valid).to.be.true;
+      expect(valid).toBeTrue();
     });
 
     it("fails for the table given in the README", function () {
@@ -218,7 +218,7 @@ describe("exercises", function () {
       const valid = validSudoku(table);
 
       // Assert
-      expect(valid).to.be.false;
+      expect(valid).toBeFalse();
     });
 
     it("fails for a duplicate number in a sub-box", function () {
@@ -239,7 +239,7 @@ describe("exercises", function () {
       const valid = validSudoku(table);
 
       // Assert
-      expect(valid).to.be.false;
+      expect(valid).toBeFalse();
     });
 
     it("fails for a duplicate number in a bottom right sub-box", function () {
@@ -260,7 +260,7 @@ describe("exercises", function () {
       const valid = validSudoku(table);
 
       // Assert
-      expect(valid).to.be.false;
+      expect(valid).toBeFalse();
     });
   });
 });
