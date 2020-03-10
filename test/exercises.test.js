@@ -1,7 +1,7 @@
 const {
   groupedAnagrams,
-  top_k_frequent_elements,
-  valid_sudoku
+  topKFrequentElements,
+  validSudoku
 } = require('../lib/exercises');
 
 describe("exercises", function () {
@@ -74,14 +74,14 @@ describe("exercises", function () {
     });
   });
 
-  describe("top_k_frequent_elements", function () {
+  describe("topKFrequentElements", function () {
     it("works with example 1", function () {
       // Arrange
       const list = [1, 1, 1, 2, 2, 3];
       const k = 2;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).toEqual([1, 2]);
@@ -93,7 +93,7 @@ describe("exercises", function () {
       const k = 1;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).toEqual([1]);
@@ -105,7 +105,7 @@ describe("exercises", function () {
       const k = 1;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).toEqual([]);
@@ -117,7 +117,7 @@ describe("exercises", function () {
       const k = 3;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).toEqual([1, 2, 3]);
@@ -129,7 +129,7 @@ describe("exercises", function () {
       const k = 1;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).toEqual([1]);
@@ -152,7 +152,7 @@ describe("exercises", function () {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toBe.false;
@@ -173,7 +173,7 @@ describe("exercises", function () {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toBe.false;
@@ -194,7 +194,7 @@ describe("exercises", function () {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toBe.true;
@@ -215,7 +215,7 @@ describe("exercises", function () {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toBe.false;
@@ -236,7 +236,7 @@ describe("exercises", function () {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toBe.false;
@@ -257,7 +257,7 @@ describe("exercises", function () {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toBe.false;
