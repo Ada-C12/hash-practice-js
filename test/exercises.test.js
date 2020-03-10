@@ -3,21 +3,17 @@ const {
   top_k_frequent_elements,
   valid_sudoku
 } = require('../lib/exercises');
-
 describe("exercises", function () {
   describe("grouped_anagrams", function () {
     it("will return [] for an empty array", function () {
       // Arrange
       const list = [];
-
       // Act-Assert
       expect(grouped_anagrams(list)).toEqual([]);
     });
-
     it("will work for the README example", function () {
       // Arrange
       const list = ["eat", "tea", "tan", "ate", "nat", "bat"];
-
       // Act
       const answer = grouped_anagrams(list);
       const expected_answer = [
@@ -25,21 +21,17 @@ describe("exercises", function () {
         ["nat", "tan"],
         ["bat"]
       ];
-
       // Assert
       expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array, index) => {
         expect(array.sort()).toEqual(expected_answer[index]);
       });
     });
-
     it("will work for strings with no anagrams", function () {
       // Arrange
       const list = ["eat", "ear", "tar", "pop", "pan", "pap"];
-
       // Act
       const answer = grouped_anagrams(list);
-
       const expected_answer = [
         ["eat"],
         ["ear"],
@@ -48,24 +40,20 @@ describe("exercises", function () {
         ["pan"],
         ["pap"]
       ];
-
       // Assert
       expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array) => {
         expect(expected_answer).toContainEqual(array.sort());
       });
     });
-
     it("will work for strings that are all anagrams", function () {
       // Arrange
       const list = ["eat", "tae", "tea", "eta", "aet", "ate"]
-
       // Act
       const answer = grouped_anagrams(list);
       const expected_answer = [
         ["aet", "ate", "eat", "eta", "tae", "tea"]
       ];
-
       // Assert
       expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array) => {
@@ -74,7 +62,7 @@ describe("exercises", function () {
     });
   });
 
-  describe.skip("top_k_frequent_elements", function () {
+  describe("top_k_frequent_elements", function () {
     it("works with example 1", function () {
       // Arrange
       const list = [1, 1, 1, 2, 2, 3];
