@@ -5,7 +5,7 @@ const {
 } = require('../lib/exercises');
 
 describe("exercises", function () {
-  describe.skip("grouped_anagrams", function () {
+  describe("grouped_anagrams", function () {
     it("will return [] for an empty array", function () {
       // Arrange
       const list = [];
@@ -27,7 +27,7 @@ describe("exercises", function () {
       ];
 
       // Assert
-      expect(answer.length).to.be.greaterThan(0);
+      expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array, index) => {
         expect(array.sort()).toEqual(expected_answer[index]);
       });
@@ -50,9 +50,9 @@ describe("exercises", function () {
       ];
 
       // Assert
-      expect(answer.length).to.be.greaterThan(0);
+      expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array) => {
-        expect(expected_answer).to.deep.include(array.sort());
+        expect(expected_answer).toContainEqual(array.sort());
       });
     });
 
@@ -67,9 +67,9 @@ describe("exercises", function () {
       ];
 
       // Assert
-      expect(answer.length).to.be.greaterThan(0);
+      expect(answer.length).toBeGreaterThan(0);
       answer.forEach((array) => {
-        expect(expected_answer).to.deep.include(array.sort());
+        expect(expected_answer).toContainEqual(array.sort());
       });
     });
   });
